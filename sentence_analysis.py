@@ -15,18 +15,19 @@ sentence = """Le sénateur, dont il a été parlé plus haut, était un homme en
     """
 
 #Toutes les voyelles possibles
-#voyelles = "aeiouyAEIOUYéèâàuùû"
+voyelles = "aeiouyAEIOUYéêèâàuùû"
 
-#Le compteur de a
-count_a = 0
+#Le compteur de voyelles
+count_voyelle = 0
 
 #On parcourt la phrase caractère par caractère
-#for letter in sentence:
+for letter in sentence:
 	#Si le caractère est un "a" ou un "à", on incrémente le compteur
-	#if letter == 'a' or letter == 'à':
-		#count_a += 1
+	#if letter == 'a' or letter == 'e' or letter == 'i' or letter == 'o' or letter == 'u' or letter == 'y' or letter == 'A' or letter == 'E' or letter == 'I'  or letter == 'O' or letter == 'U' or letter == 'Y' or letter == 'é' or letter == 'è' or letter == 'ê' or letter == 'à' or letter == 'â' or letter == 'ù' or letter == 'û':
+	#	count_voyelle += 1
+    if letter in voyelles:
+        count_voyelle += 1
 
 #Phrase qui donne le nombre de lettres.
 #On doit convertir le compteur en chaîne de caractères.
-#print("Le texte contient " + str(count_a) + " fois la lettre a")
-
+print("Le texte contient " + str(count_voyelle) + " voyelles")
